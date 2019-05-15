@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html> 
+    <head>
+        <title> 
+            Crystal Collector 
+        </title>
+        <meta charset="UTF-8">
+        <!-- Added link to the jQuery Library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- Added link to bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <h1> Crystal Collector </h1>
+        <p> Instructions go here ...</p>
+        <p id="number"> random number </p>
+        <p> wins </p>
+        <p> losses </p>
+
+        <button type="button" class="btn btn-primary" id="button1">Blue</button>
+        <button type="button" class="btn btn-secondary" id="button2">Gray</button>
+        <button type="button" class="btn btn-success" id="button3">Green</button>
+        <button type="button" class="btn btn-danger" id="button4">Red</button>
+
+        
+        <script type = text/javascript>
+            // VARIABLE REFERENCE TO HTML 
+            var number = document.getElementById("number"); 
+
+            //VARIABLES FOR THE GAME 
+            // this is the random number that the user must guess to
+            var randomNumber = []; 
+
+            // INITIALIZE PAGE - THIS RUNS WHEN THE PAGE LOADS 
+            $(document).ready(function() {
+                console.log ("ready!");
+            
+
+            // this is generating the random number that the user must guess to
+            var randomNumber = Math.floor(Math.random()* 120 + 19);
+            //log to console 
+            console.log ("number to guess " + randomNumber);
+            //print to HTML 
+            randomNumber.innerHTML=number; 
+
+            // BUTTON VALUES OBJECT 
+            // Define each number as a random number between 1 - 12 
+            var num1 = Math.floor(Math.random() * 12+1);
+            console.log ("number 1 " + num1);
+            var num2 = Math.floor(Math.random() * 12+1);
+            console.log ("number 2 " + num2);
+            var num3 = Math.floor(Math.random() * 12+1);
+            console.log ("number 3 " + num3);
+            var num4 = Math.floor(Math.random() * 12+1);
+            console.log ("number 4 " + num4);
+            
+            $(".btn").on("click", 
+                function() {
+                    
+                }
+            ) 
+            
+
+            }); 
+
+        </script>
+
+    </body>
+</html>
