@@ -15,7 +15,8 @@
     <body>
         <h1> Crystal Collector </h1>
         <p> Instructions go here ...</p>
-        <p id="number"> random number </p>
+        <p> random number </p>
+        <p id="number"> </p>
         <p> wins </p>
         <p> losses </p>
 
@@ -36,32 +37,49 @@
             // INITIALIZE PAGE - THIS RUNS WHEN THE PAGE LOADS 
             $(document).ready(function() {
                 console.log ("ready!");
+
+                //START GAME FUNCTION - SET RANDOM NUMBER, SETS BUTTON NUMBERS
             
 
-            // this is generating the random number that the user must guess to
-            var randomNumber = Math.floor(Math.random()* 120 + 19);
-            //log to console 
-            console.log ("number to guess " + randomNumber);
-            //print to HTML 
-            randomNumber.innerHTML=number; 
+                    // this is generating the random number that the user must guess to
+                    var randomNumber = Math.floor(Math.random()* 120 + 19);
+                    //log to console 
+                    console.log ("number to guess " + randomNumber);
+                    //print to HTML 
+                    number.innerHTML = randomNumber 
 
-            // BUTTON VALUES OBJECT 
-            // Define each number as a random number between 1 - 12 
-            var num1 = Math.floor(Math.random() * 12+1);
-            console.log ("number 1 " + num1);
-            var num2 = Math.floor(Math.random() * 12+1);
-            console.log ("number 2 " + num2);
-            var num3 = Math.floor(Math.random() * 12+1);
-            console.log ("number 3 " + num3);
-            var num4 = Math.floor(Math.random() * 12+1);
-            console.log ("number 4 " + num4);
+                    // BUTTON VALUES  
+                    // Define each number as a random number between 1 - 12 
+                    var num1 = Math.floor(Math.random() * 12+1);
+                    console.log ("number 1 " + num1);
+                    var num2 = Math.floor(Math.random() * 12+1);
+                    console.log ("number 2 " + num2);
+                    var num3 = Math.floor(Math.random() * 12+1);
+                    console.log ("number 3 " + num3);
+                    var num4 = Math.floor(Math.random() * 12+1);
+                    console.log ("number 4 " + num4);
+
+                    //ASSIGN VALUES AS PART OF START FUNCTION
+                    // END START FUNCTION 
             
-            $(".btn").on("click", 
-                function() {
-                    
-                }
-            ) 
-            
+
+                //ON CLICK EVENT FUNCTION - ADD THE NUMBERS, UPDATE TOTAL SCORE
+                // END
+                
+                // $(".btn").on("click", 
+                //     function() {
+                //        var buttonValue = ($(this).attr()) 
+                //     }
+                // ) 
+                
+                //WIN FUNCTION 
+                //CALL START FUNCTION 
+                //END
+
+                //LOSE FUNCTION 
+                //CALL START FUNCTION 
+                //END
+
 
             }); 
 
