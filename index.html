@@ -80,13 +80,16 @@
                     number.innerHTML = randomNumber 
 
  
-                    // Define each number as a random number between 1 - 12 
+                    // Define each number as a random number between 1 - 12, and set the value in the object
                     var num1 = Math.floor(Math.random() * 12+1);
                     console.log ("number 1 " + num1);
+
                     var num2 = Math.floor(Math.random() * 12+1);
                     console.log ("number 2 " + num2);
+
                     var num3 = Math.floor(Math.random() * 12+1);
                     console.log ("number 3 " + num3);
+
                     var num4 = Math.floor(Math.random() * 12+1);
                     console.log ("number 4 " + num4);
                     
@@ -104,7 +107,9 @@
                 
                 $("#button1").on("click", 
                     function() {
-                        alert("button 1 clicked");  
+                        alert("button 1 clicked"); 
+                        currentGuess = currentGuess + num1;
+                        console.log("on click number = " + num1); 
                     }
                 ) 
 
