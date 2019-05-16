@@ -18,7 +18,9 @@
         <p> random number </p>
         <p id="number"> </p>
         <p> wins </p>
+        <p id="wins"></p>
         <p> losses </p>
+        <p id= "losses"></p>
 
         <button type="button" class="btn btn-primary" id="button1">Blue</button>
         <button type="button" class="btn btn-secondary" id="button2">Gray</button>
@@ -30,25 +32,54 @@
             // VARIABLE REFERENCE TO HTML 
             var number = document.getElementById("number"); 
 
+
             //VARIABLES FOR THE GAME 
-            // this is the random number that the user must guess to
+            //--------------------------------------------------------------------------
+            // these are the button values 
+            var buttons = {
+                button1: {
+                    value: 0
+                }
+
+                button2: {
+                    value:0 
+                }
+
+                button3: {
+                    value:0
+                }
+
+                button4 {
+                    value:0
+                }
+            };
+            
+            // this is the random number and the current guess
             var randomNumber = []; 
+            var currentGuess = []; 
+            
+
+            //--------------------------------------------------------------------------
+            
 
             // INITIALIZE PAGE - THIS RUNS WHEN THE PAGE LOADS 
             $(document).ready(function() {
                 console.log ("ready!");
 
                 //START GAME FUNCTION - SET RANDOM NUMBER, SETS BUTTON NUMBERS
+                //--------------------------------------------------------------------------
                 
                 function startGame() {
-                    // this is generating the random number that the user must guess to
+                    // reset the current score 
+                    var currentGuess = 0; 
+                    // this is generating the random number (target number) that the user must match to win
                     var randomNumber = Math.floor(Math.random()* 120 + 19);
                     //log to console 
                     console.log ("number to guess " + randomNumber);
                     //print to HTML 
                     number.innerHTML = randomNumber 
 
-                    // BUTTON VALUES  
+ 
                     // Define each number as a random number between 1 - 12 
                     var num1 = Math.floor(Math.random() * 12+1);
                     console.log ("number 1 " + num1);
@@ -58,22 +89,47 @@
                     console.log ("number 3 " + num3);
                     var num4 = Math.floor(Math.random() * 12+1);
                     console.log ("number 4 " + num4);
-                
+                    
+                    //ASSIGN VALUES TO BUTTONS AS PART OF START FUNCTION
 
-                    //ASSIGN VALUES AS PART OF START FUNCTION
                     // END START FUNCTION 
-                }    
+                    //--------------------------------------------------------------------------
+                } 
+   
             
 
-                //ON CLICK EVENT FUNCTION - ADD THE NUMBERS, UPDATE TOTAL SCORE
-                // END
+                //BUTTON ON CLICK EVENTS
+                //--------------------------------------------------------------------------
                 
-                // $(".btn").on("click", 
-                //     function() {
-                //        var buttonValue = ($(this).attr()) 
-                //     }
-                // ) 
                 
+                $("#button1").on("click", 
+                    function() {
+                        alert("button 1 clicked");  
+                    }
+                ) 
+
+                $("#button2").on("click", 
+                    function() {
+                        alert("button 2 clicked");  
+                    }
+                ) 
+
+                $("#button3").on("click", 
+                    function() {
+                        alert("button 3 clicked");  
+                    }
+                ) 
+
+                $("#button4").on("click", 
+                    function() {
+                        alert("button 4 clicked");  
+                    }
+                ) 
+
+                //--------------------------------------------------------------------------
+                
+                //ADD FUNCTION??
+
                 //WIN FUNCTION 
                 //CALL START FUNCTION 
                 //END
