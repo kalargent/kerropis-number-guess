@@ -15,7 +15,7 @@
     <body>
         <h1> Crystal Collector </h1>
         <p> Instructions go here ...</p>
-        <p> random number </p>
+        <p> random number  </p>
         <p id="number"> </p>
         <p> wins </p>
         <p id="wins"></p>
@@ -57,6 +57,7 @@
             // this is the random number and the current guess
             var randomNumber = []; 
             var currentGuess = []; 
+            var num1, num2, num3, num4; 
             
 
             //--------------------------------------------------------------------------
@@ -74,6 +75,7 @@
                     var currentGuess = 0; 
                     // this is generating the random number (target number) that the user must match to win
                     var randomNumber = Math.floor(Math.random()* 120 + 19);
+                    $("number").text(randomNumber); 
                     //log to console 
                     console.log ("number to guess " + randomNumber);
                     //print to HTML 
@@ -81,16 +83,16 @@
 
  
                     // Define each number as a random number between 1 - 12, and set the value in the object
-                    var num1 = Math.floor(Math.random() * 12+1);
+                    num1 = Math.floor(Math.random() * 12+1);
                     console.log ("number 1 " + num1);
 
-                    var num2 = Math.floor(Math.random() * 12+1);
+                    num2 = Math.floor(Math.random() * 12+1);
                     console.log ("number 2 " + num2);
 
-                    var num3 = Math.floor(Math.random() * 12+1);
+                    num3 = Math.floor(Math.random() * 12+1);
                     console.log ("number 3 " + num3);
 
-                    var num4 = Math.floor(Math.random() * 12+1);
+                    num4 = Math.floor(Math.random() * 12+1);
                     console.log ("number 4 " + num4);
                     
                     //ASSIGN VALUES TO BUTTONS AS PART OF START FUNCTION
@@ -106,28 +108,34 @@
                 
                 
                 $("#button1").on("click", 
-                    function() {
-                        alert("button 1 clicked"); 
+                    function() { 
                         currentGuess = currentGuess + num1;
-                        console.log("on click number = " + num1); 
+                        console.log("on click number = " + num1);
+                        console.log ("current guess is " + currentGuess)  
                     }
                 ) 
 
                 $("#button2").on("click", 
                     function() {
-                        alert("button 2 clicked");  
+                        currentGuess = currentGuess + num2;
+                        console.log("on click number = " + num2);
+                        console.log ("current guess is " + currentGuess)  
                     }
                 ) 
 
                 $("#button3").on("click", 
-                    function() {
-                        alert("button 3 clicked");  
+                    function() { 
+                        currentGuess = currentGuess + num3; 
+                        console.log("on click number = " + num3);
+                        console.log ("current guess is " + currentGuess) 
                     }
                 ) 
 
                 $("#button4").on("click", 
                     function() {
-                        alert("button 4 clicked");  
+                        currentGuess = currentGuess + num4;
+                        console.log("on click number = " + num4); 
+                        console.log ("current guess is " + currentGuess) 
                     }
                 ) 
 
