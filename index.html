@@ -58,7 +58,8 @@
             var randomNumber = []; 
             var currentGuess = 0; 
             var num1, num2, num3, num4; 
-            
+            var wins = 0;
+            var losses = 0; 
 
             //--------------------------------------------------------------------------
             
@@ -135,20 +136,41 @@
                         console.log("on click number = " + num4); 
                         console.log ("current guess is " + currentGuess) 
                     }
+                    
                 ) 
 
                 //--------------------------------------------------------------------------
                 
-                //ADD FUNCTION??
+                //WIN OR LOSE FUNCTION 
+                // If the guessedCount matches the random number
+                function endGame(){
+                    if (currentGuess === randomNumber) {
+                        // Display an alert
+                        alert ("You're a winner!");  
+                        // Write to console
+                        console.log ("they won");
+                        // Increment win counter  
+                        wins++; 
+                        // Log win counter to console 
+                        console.log ("wins " + wins); 
+                        // Start game
+                        startGame(); 
+                    } 
 
-                //WIN FUNCTION 
-                //CALL START FUNCTION 
-                //END
+                    // else if the guessed count is greater than the random number
+                    else if (currentGuess > randomNumber) {                     // Display an alert 
+                        alert ("You lose!!"); 
+                        // Log to console 
+                        console.log ("they lost"); 
+                        // Increment losses counter 
+                        losses++; 
+                        // Log losses to console 
+                        console.log ("losses " + losses); 
+                        // Start game 
+                        startGame(); 
 
-                //LOSE FUNCTION 
-                //CALL START FUNCTION 
-                //END
-
+                    }
+                }    
                 //RUNS THE GAME 
                 startGame();     
             }); 
