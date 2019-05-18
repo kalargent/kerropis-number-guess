@@ -3,7 +3,7 @@
 <html> 
     <head>
         <title> 
-            Crystal Collector 
+            Number Guess Game  
         </title>
         <meta charset="UTF-8">
         <!-- Added link to the jQuery Library -->
@@ -13,10 +13,14 @@
     </head>
 
     <body>
-        <h1> Crystal Collector </h1>
-        <p> Instructions go here ...</p>
+        <h1> Number Guess Game </h1>
+        <p> A random number is provided below. </p>
+
+        <p> There are four buttons below, and clicking a button </p>
         <p> random number  </p>
         <p id="number"> </p>
+        <p>Current Guess</p>
+        <p id ="currentGuess"></p>
         <p> wins </p>
         <p id="wins"></p>
         <p> losses </p>
@@ -29,13 +33,9 @@
 
         
         <script type = text/javascript>
-            // VARIABLE REFERENCE TO HTML 
-            var number = document.getElementById("number"); 
-
-
-            //VARIABLES FOR THE GAME 
+        
             //--------------------------------------------------------------------------
-            // these are the button values 
+            // these are initial the button values 
             var buttons = {
                 button1: {
                     value: 0
@@ -110,7 +110,8 @@
                     function() { 
                         currentGuess = currentGuess + num1;
                         console.log("on click number = " + num1);
-                        console.log ("current guess is " + currentGuess)
+                        console.log ("current guess is " + currentGuess);
+                        $("#currentGuess").text(currentGuess); 
                         endGame();  
                     }
                 ) 
@@ -119,7 +120,8 @@
                     function() {
                         currentGuess = currentGuess + num2;
                         console.log("on click number = " + num2);
-                        console.log ("current guess is " + currentGuess)  
+                        console.log ("current guess is " + currentGuess);  
+                        $("#currentGuess").text(currentGuess); 
                         endGame();
                     }
                 ) 
@@ -128,7 +130,8 @@
                     function() { 
                         currentGuess = currentGuess + num3; 
                         console.log("on click number = " + num3);
-                        console.log ("current guess is " + currentGuess) 
+                        console.log ("current guess is " + currentGuess); 
+                        $("#currentGuess").text(currentGuess);  
                         endGame();
                     }
                 ) 
@@ -137,7 +140,8 @@
                     function() {
                         currentGuess = currentGuess + num4;
                         console.log("on click number = " + num4); 
-                        console.log ("current guess is " + currentGuess) 
+                        console.log ("current guess is " + currentGuess);  
+                        $("#currentGuess").text(currentGuess); 
                         endGame();
                     }
                     
