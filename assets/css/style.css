@@ -4,8 +4,8 @@
 
 body {
 
-    background: #f2bcbc;   
-    /* background-image: url("../images/fishnets-and-hearts.png") */
+    /* background: #f2bcbc;    */
+    background-image: url("../images/wood.jpeg")
 } 
 
 
@@ -20,14 +20,22 @@ body {
 h1 {
     margin: 10px; 
     align-content: center; 
+    text-shadow:
+		-2px -2px 0 #fff,
+		2px -2px 0 #fff,
+		-2px 2px 0 #fff,
+        2px 2px 0 #fff;
+     
 }
 
 p {
     margin: 5px; 
+    text-shadow:
+    
 }
 
 .row { 
-    background-color: white; 
+    background-color: #7bcc4b; 
     margin: 10px; 
 }
 
@@ -68,4 +76,19 @@ p {
     width: 100px; 
     height: 100px; 
     border-color: black; 
+}
+
+.col-md {
+    margin: 5px; 
+    align-content: center;
+}
+
+.col {
+    background: #f2bcbc; 
+    padding: 10px; 
+}
+
+.num-col {
+    padding: 20px; 
+    align-content: center; 
 }
