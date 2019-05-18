@@ -55,7 +55,7 @@
             };
             
             // this is the random number and the current guess
-            var randomNumber = []; 
+            var randomNumber = 0; 
             var currentGuess = 0; 
             var num1, num2, num3, num4; 
             var wins = 0;
@@ -73,9 +73,9 @@
                 
                 function startGame() {
                     // reset the current score 
-                    var currentGuess = 0; 
+                    currentGuess = 0; 
                     // this is generating the random number (target number) that the user must match to win
-                    var randomNumber = Math.floor(Math.random()* 120 + 19);
+                    randomNumber = Math.floor(Math.random()* 120 + 19);
                     $("number").text(randomNumber); 
                     //log to console 
                     console.log ("number to guess " + randomNumber);
@@ -110,7 +110,8 @@
                     function() { 
                         currentGuess = currentGuess + num1;
                         console.log("on click number = " + num1);
-                        console.log ("current guess is " + currentGuess)  
+                        console.log ("current guess is " + currentGuess)
+                        endGame();  
                     }
                 ) 
 
@@ -119,6 +120,7 @@
                         currentGuess = currentGuess + num2;
                         console.log("on click number = " + num2);
                         console.log ("current guess is " + currentGuess)  
+                        endGame();
                     }
                 ) 
 
@@ -127,6 +129,7 @@
                         currentGuess = currentGuess + num3; 
                         console.log("on click number = " + num3);
                         console.log ("current guess is " + currentGuess) 
+                        endGame();
                     }
                 ) 
 
@@ -135,6 +138,7 @@
                         currentGuess = currentGuess + num4;
                         console.log("on click number = " + num4); 
                         console.log ("current guess is " + currentGuess) 
+                        endGame();
                     }
                     
                 ) 
@@ -144,6 +148,8 @@
                 //WIN OR LOSE FUNCTION 
                 // If the guessedCount matches the random number
                 function endGame(){
+                    console.log (currentGuess); 
+                    console.log(randomNumber);
                     if (currentGuess === randomNumber) {
                         // Display an alert
                         alert ("You're a winner!");  
@@ -151,6 +157,8 @@
                         console.log ("they won");
                         // Increment win counter  
                         wins++; 
+                        // Push wins to HTML 
+                        $("#wins").text(wins); 
                         // Log win counter to console 
                         console.log ("wins " + wins); 
                         // Start game
@@ -158,17 +166,25 @@
                     } 
 
                     // else if the guessed count is greater than the random number
-                    else if (currentGuess > randomNumber) {                     // Display an alert 
+                    else if (currentGuess > randomNumber) {                     
+                        // Display an alert 
                         alert ("You lose!!"); 
                         // Log to console 
                         console.log ("they lost"); 
                         // Increment losses counter 
                         losses++; 
+                        // Push losses to HTML 
+                        $("#losses").text (losses); 
                         // Log losses to console 
                         console.log ("losses " + losses); 
                         // Start game 
                         startGame(); 
 
+                    }
+
+                    else if (currentGuess < randomNumber) {
+                        // no actions to take
+                        return; 
                     }
                 }    
                 //RUNS THE GAME 
