@@ -14,22 +14,24 @@
     </head>
 
     <body>
-        <div class = "jumbotron">
+        <!-- <div class = "jumbotron">
             <h1 class = "jumboContent"> Kerropi's Number Guess Game </h1>
-        </div>
-
-        <div class="container">
-            <p> Hi! I'm Kerropi! Want to play a game?  </p>
-
-            <p> I've picked a number at random, below. The buttons at the bottom are all assigned a random, hidden number. Your goal is to figure out the value assigned to each button, and then add the numbers until it matches the random number I selected. 
-            </p>
-            <p> If you match my random number, you win!</p> 
-            <p>If you go above the value of my random number, you lose! 
-            </p>
-            <p> Click a button below to get started!</p>
-        </div>
+        </div> -->
 
         <div class="container"> 
+                <div class="row">
+                    <h1> Kerropi's Number Match Game!</h1>
+                </div>
+                <div class="row">
+                    <p> Hi! I'm Kerropi! Want to play a game?  </p>
+            
+                        <p> I've picked a number at random, below. The buttons at the bottom are all assigned a random, hidden number. Your goal is to figure out the value assigned to each button, and then add the numbers until it matches the random number I selected. 
+                        </p>
+                        <p> If you match my random number, you win!</p> 
+                        <p>If you go above the value of my random number, you lose! 
+                        </p>
+                        <p> Click a button below to get started!</p>
+                    </div>
             <div class="row">
                     <div class = "col-md"> Random Number  </div>
                     <div class="col-md" id="number"> </div>
@@ -45,11 +47,11 @@
                     <div class="col-md" id= "losses"></div>
             </div>
 
-            <div class="row">
-                    <button type="button" class="btn btn-primary" id="button1">Blue</button>
-                    <button type="button" class="btn btn-secondary" id="button2">Gray</button>
-                    <button type="button" class="btn btn-success" id="button3">Green</button>
-                    <button type="button" class="btn btn-danger" id="button4">Red</button>
+            <div class="row row-btn">
+                    <button type="button" class="btn btn-primary" id="button1"></button>
+                    <button type="button" class="btn btn-secondary" id="button2"></button>
+                    <button type="button" class="btn btn-success" id="button3"></button>
+                    <button type="button" class="btn btn-danger" id="button4"></button>
             </div>
     </div>
 
