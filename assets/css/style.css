@@ -14,7 +14,7 @@ body {
     background-image: url("../images/background.jpg");
     width: 640px;
     height: 960px;
-    padding-top: 100px; 
+    padding-top: 80px; 
 
 }
 h1 {
@@ -30,52 +30,53 @@ h1 {
 
 p {
     margin: 5px; 
-    text-shadow:
+    /* padding: 2px;  */
     
 }
 
 .row { 
     background-color: #7bcc4b; 
-    margin: 10px; 
+    margin: 5px; 
+    border: 1px solid darkgreen; 
 }
 
 .row-btn {
     background-color: #38A93F; 
+    border: none
 
 }
 
 .btn {
     margin-right: 20px; 
     margin-left: 20px; 
+    width: 100px; 
+    height: 100px; 
+    border-color: darkgreen; 
     
+}
+
+.btn:hover {
+    border: 2px solid darkgreen; 
+
 }
 
 #button1 {
     background-image: url(../images/kerropi.png); 
-    width: 100px; 
-    height: 100px; 
-    border-color: black;
 }
 
 #button2 {
     background-image: url(../images/kerropi2.png); 
-    width: 100px; 
-    height: 100px; 
-    border-color: black;
+
 }
 
 #button3 {
     background-image: url(../images/kerropi3.png); 
-    width: 100px; 
-    height: 100px; 
-    border-color: black;
+
 }
 
 #button4 {
     background-image: url(../images/kerropi5.png); 
-    width: 100px; 
-    height: 100px; 
-    border-color: black; 
+     
 }
 
 .col-md {
@@ -85,10 +86,14 @@ p {
 
 .col {
     background: #f2bcbc; 
-    padding: 10px; 
+    padding: 5px; 
+    text-align: center;
+    padding-top: 10px; 
+    font-weight: bold; 
 }
 
 .num-col {
-    padding: 20px; 
-    align-content: center; 
+    padding: 10px; 
+    text-align: center;
+    font-size: 30px;
 }

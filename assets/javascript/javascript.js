@@ -1,5 +1,4 @@
 
-        
 //--------------------------------------------------------------------------
 // these are initial the button values 
 var buttons = {
@@ -40,13 +39,15 @@ $(document).ready(function() {
     function startGame() {
         // reset the current score 
         currentGuess = 0; 
+        $("#currentGuess").text(currentGuess);
+        $("#wins").text(wins);
+        $("#losses").text(losses);
         // this is generating the random number (target number) that the user must match to win
         randomNumber = Math.floor(Math.random()* 120 + 19);
-        $("number").text(randomNumber); 
+        $("#number").text(randomNumber); 
         //log to console 
         console.log ("number to guess " + randomNumber);
-        //print to HTML 
-        number.innerHTML = randomNumber 
+        
 
 
         // Define each number as a random number between 1 - 12, and set the value in the object
