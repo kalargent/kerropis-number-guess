@@ -22,14 +22,9 @@ NOTABLE REQUIREMENTS:
 </ul>
 
 KNOWN ISSUES: 
-<ul> 
-<li>background image tiling is ugly, i need to learn how to size images better</li>
-<li>need to use CSS to figure out the blue outline on active states for buttons and for text field</li>
-</ul>
+
 
 BACKLOG: 
 <ul>
 <li>test and tweak mobile responsiveness not handled by bootstrap</li>
-<li>remove a user-added button, or any button from the list </li>
-<li>display additional metadata</li>
 </ul>
